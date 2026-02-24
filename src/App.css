@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bs-primary-50: oklch(0.95 0.02 245.31);
+  --color-bs-primary-100: oklch(0.90 0.03 245.31);
+  --color-bs-primary-200: oklch(0.85 0.04 245.31);
+  --color-bs-primary-300: oklch(0.70 0.05 245.31);
+  --color-bs-primary-400: oklch(0.55 0.06 245.31);
+  --color-bs-primary-500: oklch(0.2796 0.0708 245.31);
+  --color-bs-primary-600: oklch(0.24 0.07 245.31);
+  --color-bs-primary-700: oklch(0.20 0.06 245.31);
+  --color-bs-primary-800: oklch(0.16 0.05 245.31);
+  --color-bs-primary-900: oklch(0.12 0.04 245.31);
+  --color-bs-primary-950: oklch(0.08 0.03 245.31);
+  --color-bs-primary: oklch(0.2796 0.0708 245.31);
+
+  --color-bs-secondary-50: oklch(0.95 0.05 38.04);
+  --color-bs-secondary-100: oklch(0.90 0.08 38.04);
+  --color-bs-secondary-200: oklch(0.85 0.12 38.04);
+  --color-bs-secondary-300: oklch(0.80 0.16 38.04);
+  --color-bs-secondary-400: oklch(0.75 0.18 38.04);
+  --color-bs-secondary-500: oklch(0.7036 0.1925 38.04);
+  --color-bs-secondary-600: oklch(0.65 0.19 38.04);
+  --color-bs-secondary-700: oklch(0.55 0.17 38.04);
+  --color-bs-secondary-800: oklch(0.45 0.14 38.04);
+  --color-bs-secondary-900: oklch(0.35 0.10 38.04);
+  --color-bs-secondary-950: oklch(0.25 0.07 38.04);
+  --color-bs-secondary: oklch(0.7036 0.1925 38.04);
+
+  --color-bs-dark: oklch(0.2423 0.0212 276.66);
+
+}
+
+#root {
+  margin: 0 0;
+}
