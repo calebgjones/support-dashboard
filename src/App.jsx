@@ -1,15 +1,20 @@
 import './App.css'
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavigationBar from './components/NavigationBar/navigationBar.jsx'
 import HomePage from './components/HomePage/homePage.jsx'
+import DynamicPage from './components/DynamicPage/DynamicPage.jsx'
 
 /**
  * App component sets up client-side routing for the dashboard.
  *
- * Uses React Router to map paths to pages:
- * - The `:` prefix denotes a dynamic URL segment (route parameter).
- *   For example, `/module/:moduleName` captures the `moduleName` part of the URL
- *   and makes it available to the rendered component (e.g., via `useParams`).
+ * Routes automatically resolve to:
+ * 1. A file-based component in /Modules/ (if it exists)
+ * 2. Content from contentArray.js (fallback)
+ * 
+ * File structure examples:
+ * - /teams/tier-1/tyler → tries /Modules/teams/tier-1/tyler.jsx
+ * - /teams/tier-1 → tries /Modules/teams/tier-1/index.jsx or /Modules/teams/tier-1.jsx
+ * - /teams → tries /Modules/teams/index.jsx or /Modules/teams.jsx
  */
 function App() {
 
@@ -19,28 +24,14 @@ function App() {
     <NavigationBar />
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/module/:moduleName" element={<ModulePage />} />
-      <Route path="/module/:moduleName/section/:sectionName" element={<SectionPage />} />
-      <Route path="/module/:moduleName/section/:sectionName/subsection/:subsectionName" element={<SubsectionPage />} />
+      {/* Dynamic routes - automatically check for file or use contentArray */}
+      <Route path="/:moduleName" element={<DynamicPage />} />
+      <Route path="/:moduleName/:sectionName" element={<DynamicPage />} />
+      <Route path="/:moduleName/:sectionName/:subsectionName" element={<DynamicPage />} />
     </Routes>
     </BrowserRouter>
     </>
   )
-}
-
-function ModulePage() {
-  const { moduleName } = useParams();
-  return <div>Module: {moduleName}</div>;
-}
-
-function SectionPage() {
-  const { moduleName, sectionName } = useParams();
-  return <div>Module: {moduleName}, Section: {sectionName}</div>;
-}
-
-function SubsectionPage() {
-  const { moduleName, sectionName, subsectionName } = useParams();
-  return <div>Module: {moduleName}, Section: {sectionName}, Subsection: {subsectionName}</div>;
 }
 
 export default App

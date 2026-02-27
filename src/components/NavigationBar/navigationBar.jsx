@@ -239,8 +239,8 @@ const NavigationBar = () => {
 
 return (
   <>
-    <nav className="sticky top-0 z-50 shadow-lg bg-bs-primary">
-        <div className="flex items-center justify-between px-4 py-3">
+    <nav className="sticky top-0 z-50 shadow-lg bg-bs-primary px-[10%]">
+        <div className="flex items-center justify-between px-2 py-3">
           <ul className="flex flex-wrap items-center gap-1">
             <li>
                     <Link 

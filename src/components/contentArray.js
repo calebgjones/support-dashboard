@@ -138,7 +138,7 @@ Note:
                 },
                 {
                     title: "Operations",
-                    notes: "Ops team",
+                    notes: "Sections related to the Operations team.",
                     subsections: [
                         {
                             title: "Dom",
@@ -170,6 +170,26 @@ Note:
                             notes: "",
                             modal: false,  // true = show info modal when clicked
                             mult: true // true = show modal AND navigate to route (requires modal: true)
+                        }
+                    ]
+                },
+                {
+                    title: "Payroll Support",
+                    subsections: [
+                        {
+                            title: "Reports",
+                            info: "Payroll reports",
+                            notes: "",
+                            modal: false,  // true = show info modal when clicked
+                            mult: false // true = show modal AND navigate to route (requires modal: true)
+                        }, 
+                        {
+
+                            title: "Stats",
+                            info: "Payroll stats",
+                            notes: "",
+                            modal: false,  // true = show info modal when clicked
+                            mult: false // true = show modal AND navigate to route (requires modal: true)
                         }
                     ]
                 }
